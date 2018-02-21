@@ -1,29 +1,45 @@
-//Data Types in Javascript
+//TYPE CONVERSION
 
-// PRIMITIVE TYPE
+let val;
 
-// String
-const name = 'John Doe';
-// Number
-const age = 45;
-// Boolean
-const hasKids = true;
-// Null
-const car = null;
-// Undefined
-let test;
-// Symbol
-const sym = Symbol();
+// Number to string
+val = String(555);
+val = String(4+4);
+// Boolean to a string
+val = String(true);
+// Date to a string
+val = String(new Date());
+// Array to a string
+val = String([1,2,3,4]);
 
-//REFERNCE TYPE
-// Array
-const hobbies = ['movies', 'music'];
-// Object Literal
-const address = {
-  city : 'Boston',
-  state : 'MA'
-};
-const today = new Date();
+// toString()
+val = (5).toString();
+val = (true).toString();
 
-console.log(today);
-console.log(typeof today);
+// String to Number
+val = Number('5');
+// Boolean to Number
+val = Number(true); // 1
+val = Number(false); // 0
+val = Number(null); // 0
+val = Number('hello'); // NaN (Not a Number)
+val = Number([1,2,3]);  // Nan (Not a Number)
+
+val = parseInt('100.30');
+val = parseFloat('100.30');
+
+
+// Output
+// console.log(val);
+// console.log(typeof val);
+// // console.log(val.length);
+// console.log(val.toFixed(2));
+
+//Type Coersion
+
+const val1 = String('5');
+const val2 = 6;
+const sum = Number(val1 + val2);
+
+console.log(sum);
+console.log(typeof sum);
