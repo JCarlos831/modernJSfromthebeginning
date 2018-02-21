@@ -1,28 +1,52 @@
-// Log to console
-console.log('Hello World');  //String
-console.log(123);  //Numbers
-console.log(true);  //Boolean
-var greeting = 'Hello'; 
-console.log(greeting);  //Variables
-console.log([1,2,3,4]);  //Arrays
-console.log({a:1, b:2});  //Objects
-console.table({a:1, b:2});  //Objects appear as a table in the console.
+// Threee types of variables var, let, const
 
-console.error('This is some error');  //Will appear in red in the console
-console.clear();  //Will clear the console
-console.warn('This is a warning');  //Will appear in yellow in the console.
+// var name = 'John Doe';
+// console.log(name);
+// name = 'Steve Smith';
+// console.log(name);
 
-console.time('Hello');
-    console.log('Hello World');
-    console.log('Hello World');
-    console.log('Hello World');
-    console.log('Hello World');
-    console.log('Hello World');
-    console.log('Hello World');
-console.timeEnd('Hello');
-/*
-    multi
-    line
-    comments
-*/
-    
+// // Init var
+
+// var greeting;
+// console.log(greeting);
+// greeting = 'Hello';
+// console.log(greeting);
+
+// Variables can only start with letters, numbers, _, $
+// Variables can not start with a number
+
+// Multi word variables
+// var firstName = 'John'; // Camel Case *recommended method
+// var first_name = 'Sara' // Underscore
+// var FirstName = 'Tom' // Pascal Case *we will use for constructors in javaScript
+// var firstname;  // Not recommended
+
+// LET
+// let name;
+// name = 'John Doe';
+// console.log(name);
+// name = 'Steve Smith';
+// console.log(name);
+
+// CONST
+// const name = 'John';
+// console.log(name);
+// Can not reassign
+// name = 'sara';
+// Have to assign a value
+// const greeting;
+
+const person = {
+    name : 'John',
+    age : 30
+};
+
+person.name = 'Sara';
+person.age = 32;
+// console.log(person);
+
+const numbers = [1,2,3,4,5];
+numbers.push(6);
+
+console.log(numbers);
+
