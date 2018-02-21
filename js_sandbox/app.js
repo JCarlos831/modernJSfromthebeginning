@@ -1,52 +1,29 @@
-// Threee types of variables var, let, const
+//Data Types in Javascript
 
-// var name = 'John Doe';
-// console.log(name);
-// name = 'Steve Smith';
-// console.log(name);
+// PRIMITIVE TYPE
 
-// // Init var
+// String
+const name = 'John Doe';
+// Number
+const age = 45;
+// Boolean
+const hasKids = true;
+// Null
+const car = null;
+// Undefined
+let test;
+// Symbol
+const sym = Symbol();
 
-// var greeting;
-// console.log(greeting);
-// greeting = 'Hello';
-// console.log(greeting);
-
-// Variables can only start with letters, numbers, _, $
-// Variables can not start with a number
-
-// Multi word variables
-// var firstName = 'John'; // Camel Case *recommended method
-// var first_name = 'Sara' // Underscore
-// var FirstName = 'Tom' // Pascal Case *we will use for constructors in javaScript
-// var firstname;  // Not recommended
-
-// LET
-// let name;
-// name = 'John Doe';
-// console.log(name);
-// name = 'Steve Smith';
-// console.log(name);
-
-// CONST
-// const name = 'John';
-// console.log(name);
-// Can not reassign
-// name = 'sara';
-// Have to assign a value
-// const greeting;
-
-const person = {
-    name : 'John',
-    age : 30
+//REFERNCE TYPE
+// Array
+const hobbies = ['movies', 'music'];
+// Object Literal
+const address = {
+  city : 'Boston',
+  state : 'MA'
 };
+const today = new Date();
 
-person.name = 'Sara';
-person.age = 32;
-// console.log(person);
-
-const numbers = [1,2,3,4,5];
-numbers.push(6);
-
-console.log(numbers);
-
+console.log(today);
+console.log(typeof today);
