@@ -1,28 +1,69 @@
-// Numbers and the Math Object
+// String Methods & Concatenation
 
-const num1 = 100;
-const num2 = 50;
+const firstName = 'William';
+const lastName = 'Johnson';
+const age = 36;
+const str = 'Hello there my name is Brad';
+const tags = 'web design,web development,programming';
+
 let val;
 
-// Simple Math with Numbers
-val = num1 + num2;
-val = num1 * num2;
-val = num1 - num2;
-val = num1 / num2;
-val = num1 % num2;
+val = firstName + lastName;
 
-// Math Object
-val = Math.PI;
-val = Math.E;
-val = Math.round(2.8);
-val = Math.round(2.4);
-val = Math.ceil(2.4);
-val = Math.floor(2.8);
-val = Math.sqrt(64);
-val = Math.abs(-3);
-val = Math.pow(8, 2);
-val = Math.min(2, 33, 4, 1, 55, 6, 3, -2);
-val = Math.max(2, 33, 4, 1, 55, 6, 3, -2);
-val = Math.floor(Math.random() * 20 + 1);
+// CONCATENATION
+
+val = firstName + " " + lastName;
+
+// APPEND
+
+val = 'Brad ';
+val += 'Traversy';
+
+val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+
+// ESCAPING
+
+val = 'That\'s awesome, I can\'t wait';
+
+// LENGTH
+
+val = firstName.length;
+
+// CONCAT   
+
+val = firstName.concat(' ', lastName);
+
+// Change Case
+val = firstName.toUpperCase(firstName);
+val = firstName.toLowerCase(firstName);
+
+val = firstName[0];
+
+// indexOf()
+val = firstName.indexOf('l');
+val = firstName.lastIndexOf('l');
+
+// charAt()
+val = firstName.charAt(2);
+
+// Get last character
+val = firstName.charAt(firstName.length -1);
+
+// Get substring
+val = firstName.substring(0, 4);
+
+// slice() *mostly used for Arrays
+val = firstName.slice(0, 4);
+val = firstName.slice(-3);
+
+// split()
+val = str.split(' ');
+val = tags.split(',');
+
+// replace()
+val = str.replace('Brad', 'Jack');
+
+// includes()
+val = str.includes('foo');
 
 console.log(val);
