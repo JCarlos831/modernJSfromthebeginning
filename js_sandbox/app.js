@@ -1,52 +1,28 @@
-//SECTION 2 LECTURE 13 OBJECT LITERALS
-
-const person = {
-    firstName : 'Steve',
-    lastName : 'Smith',
-    age : 36,
-    email : 'steve@aol.com',
-    hobbies : ['music', 'sports'],
-    address : {
-        city : 'Miami',
-        state : 'Florida'
-    },
-    getBirthYear : function() {
-        return 2017 - this.age;
-    }
-};
+//SECTION 2 LECTURE 14 - DATES & TIMES
 
 let val;
 
-val = person;
-// GET SPECIFIC VALUE
-val = person.firstName;
-val = person['firstName'];
-val = person.age;
-val = person.hobbies;
-val = person.hobbies[1];
-val = person.address;
-val = person.address.state;
-val = person.address['city'];
-val = person.getBirthYear();
+const today = new Date();
+let birthday = new Date('9-10-1981 11:25:00');
+birthday = new Date('September 10 1981');
+birthday = new Date('9/10/1981');
 
-console.log(val);
 
-const people = [
-    {
-        name : 'John',
-        age : 30
-    },
-    {
-        name : 'Mike',
-        age : 23
-    },
-    {
-        name : 'Nancy',
-        age : 40
-    }
-    ];
-    
-    for (let i = 0; i < people.length; i++) {
-        console.log(people[i].name);
-    }
-    
+val = today.getMonth();
+val = today.getDate();
+val = today.getDay();
+val = today.getFullYear();
+val = today.getHours();
+val = today.getMinutes();
+val = today.getSeconds();
+val = today.getMilliseconds();
+val = today.getTime();
+
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1985);
+birthday.setHours(3);
+birthday.setMinutes(30);
+birthday.setSeconds(25);
+
+console.log(birthday);
