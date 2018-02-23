@@ -1,57 +1,42 @@
-//SECTION 3 LECTURE 25 - TRAVERSING THE DOM
-let val;
+//SECTION 3 LECTURE 26 - CREATING ELEMENTS
 
-const list = document.querySelector('ul.collection');
-const listItem = document.querySelector('li.collection-item:first-child');
+// Create Element
 
-val = listItem;
-val = list;
+const li = document.createElement('li');
 
-// Get Child Nodes
-val = list.childNodes;
-val = list.childNodes[0];
-val = list.childNodes[0].nodeName;
-val = list.childNodes[1].nodeType;
+// Add Class
 
-// Node Types
-// 1 - Element
-// 2 - Attribute (Depricated)
-// 3 - Text Node
-// 8 - Comment
-// 9 - Document Itself
-// 10 - Doctype
+li.className = 'collection-item'
 
-// Get Children Element Nodes
-val = list.children;
-val = list.children[0];
-val = list.children[1];
-val = list.children[1].textContent = 'Hello';
+// Add ID
 
-// Children of Children
-list.children[3].children[0].id = 'test-link';
-val = list.children[3].children;
+li.id = 'new-item';
 
-// First Child
-val = list.firstChild;
-val = list.firstElementChild;
+// Add Attribute
 
-// Last Child
-val = list.lastChild;
-val = list.lastElementChild;
+li.setAttribute('title', 'New Item');
 
-// Count Child Elements
-val = list.childElementCount;
+// Create Text Node and Append
 
-// Get Parent Node
-val = listItem.parentNode;
-val = listItem.parentElement;
-val = listItem.parentElement.parentElement;
+li.appendChild(document.createTextNode('Hello World'));
 
-// Get next sibling
-val = listItem.nextSibling;
-val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
-// Get previous sibling
-val = listItem.previousSibling;
-val = listItem.previousElementSibling;
+// Create New Link Element
 
-console.log(val);
+const link = document.createElement('a');
+
+// Add Classes
+
+link.className = 'delete-item secondary-content';
+
+// Add icon html
+
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+//Append Link into li
+li.appendChild(link);
+
+// Append li as child to ul
+
+document.querySelector('ul.collection').appendChild(li);
+
+console.log(li);
