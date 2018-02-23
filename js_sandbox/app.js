@@ -1,56 +1,57 @@
-//SECTION 3 LECTURE 24 - DOM SELECTORS FOR MULTIPLE ELEMENTS
+//SECTION 3 LECTURE 25 - TRAVERSING THE DOM
+let val;
 
-// document.getElementsByClassName()
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
 
-// const items = document.getElementsByClassName('collection-item');
-// console.log(items);
-// console.log(items[0]);
-// items[0].style.color = 'red';
-// items[3].textContent = 'Hello';
+val = listItem;
+val = list;
 
-// const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+// Get Child Nodes
+val = list.childNodes;
+val = list.childNodes[0];
+val = list.childNodes[0].nodeName;
+val = list.childNodes[1].nodeType;
 
-// console.log(listItems);
+// Node Types
+// 1 - Element
+// 2 - Attribute (Depricated)
+// 3 - Text Node
+// 8 - Comment
+// 9 - Document Itself
+// 10 - Doctype
 
-// document.getElementsbyTagName()
+// Get Children Element Nodes
+val = list.children;
+val = list.children[0];
+val = list.children[1];
+val = list.children[1].textContent = 'Hello';
 
-// let lis = document.getElementsByTagName('li');
-// console.log(lis);
-// console.log(lis[0]);
-// lis[0].style.color = 'red';
-// lis[3].textContent = 'Hello';
+// Children of Children
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children;
 
-// // Convert HTML Collection into an Array
+// First Child
+val = list.firstChild;
+val = list.firstElementChild;
 
-// lis = Array.from(lis);
+// Last Child
+val = list.lastChild;
+val = list.lastElementChild;
 
-// lis.reverse();
+// Count Child Elements
+val = list.childElementCount;
 
-// lis.forEach(function(li, index) {
-//   console.log(li.className);
-//   li.textContent = `${index} : Hello`;
-// });
+// Get Parent Node
+val = listItem.parentNode;
+val = listItem.parentElement;
+val = listItem.parentElement.parentElement;
 
-// console.log(lis);
+// Get next sibling
+val = listItem.nextSibling;
+val = listItem.nextElementSibling.nextElementSibling.previousElementSibling;
+// Get previous sibling
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
 
-// document.querySelectorAll()
-
-const items = document.querySelectorAll('ul.collection li.collection-item');
-
-items.forEach(function(item, index) {
-   item.textContent = `${index} : Hello` 
-});
-
-const liOdd = document.querySelectorAll('li:nth-child(odd)');
-const liEven = document.querySelectorAll('li:nth-child(even)');
-
-liOdd.forEach(function(li, index) {
-  li.style.background = '#ccc'  
-});
-
-for(let i = 0; i < liEven.length; i++) {
-    liEven[i].style.background = '#f4f4f4';
-}
-
-
-console.log(items);
+console.log(val);
