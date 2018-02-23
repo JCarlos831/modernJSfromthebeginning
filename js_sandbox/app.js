@@ -1,87 +1,64 @@
-//SECTION 2 LECTURE 18 - GENERAL LOOPS & ITERATION
+//SECTION 2 LECTURE 19 - A LOOK AT THE WINDOW OBJECT
 
-// For Loop
+// Window Methods / Objects / Properties
 
-// for(let i = 0; i < 10; i++){
-//     if(i === 2){
-//         console.log('2 is my favorite number');
-//         continue;
-//     }
-    
-//     if(i === 5){
-//         console.log('Stop the loop');
-//         break;
-//     }
-//     console.log('Number ' + i);
+// Alert
+// console.log('Hello World');
+
+// Prompt
+// const input = prompt();
+// alert(input);
+
+// Confirm
+// if(confirm('Are you sure?')){
+//     console.log('YES');
+// } else {
+//     console.log('NO');
 // }
 
-// While Loop
+let val;
 
-// let i = 0;
+// Outer Height and Width
+val = window.outerHeight;
+val = window.outerWidth;
 
-// while(i < 10) {
-//     console.log('Number ' + i);
-//     i++;
-// }
+// Inner Height and Width
+val = window.innerHeight;
+val = window.innerWidth;
 
-// Do While Loop  Will run once no matter what
+// Scroll Points
 
-// let i = 100;
+val = window.scrollY;
+val = window.scrollX;
 
-// do {
-//     console.log('Number ' + i);
-//     i++;
-// }
+// Location Object
 
-// while (i < 10);
+val = window.location;
+val = window.location.hostname;
+val = window.location.port;
+val = window.location.href;
+val = window.location.search;
 
-// Loop Through Arrays
+// Redirect
+// window.location.href = 'http://google.com';
 
-// For Loop
-const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
+// Reload
+// window.location.reload();
 
-// for(let i = 0; i < cars.length; i++){
-//     console.log(cars[i]);
-// }
+// History Object
 
-// For Each
+//window.history.go(-1);
+// val = window.history.length;
 
-// cars.forEach(function(car, index, array){
-//     console.log(`${index} : ${car}`);
-//     console.log(array);
-// });
+// Navigator Object
+val = window.navigator;
+val = window.navigator.appName;
+val = window.navigator.appVersion;
+val = window.navigator.userAgent;
+val = window.navigator.platform;
+val = window.navigator.vendor;
+val = window.navigator.language;
 
-// Map
 
-// const users = [
-//     {
-//         id : 1,
-//         name : 'John'
-//     },
-//     {
-//         id : 2,
-//         name : 'Sara'
-//     },
-//     {
-//         id : 3,
-//         name : 'Karen'
-//     }
-// ];
 
-// const ids = users.map(function(user){
-//     return user.id;
-// });
-    
-// console.log(ids);
-    
-// For In
-
-const user = {
-  firstName : 'John',
-  lastName : 'Doe',
-  age : 40
-};
-
-for(let x in user){
-    console.log(`${x} : ${user[x]}`);
-}
+console.log(val);
