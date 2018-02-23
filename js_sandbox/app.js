@@ -1,31 +1,42 @@
-//SECTION 2 LECTURE 20 - BLOCK SCOPE WITH let & const
+//SECTION 3 LECTURE 22 - Examining the Document Object
 
-// Global Scope
-var a = 1;
-let b = 2;
-const c = 3;
+let val;
 
-// console.log('Global Scope: ', a, b, c);
+val = document;
+val = document.all;
+val = document.all[2];
+val = document.all.length;
+val = document.head;
+val = document.body;
+val = document.doctype;
+val = document.domain;
+val = document.URL;
+val = document.characterSet;
+val = document.contentType;
 
-// function test() {
-//     var a = 4;
-//     let b = 5;
-//     const c = 6;
-//     console.log('Function Scope: ', a, b, c);
-// }
+val = document.forms;
+val = document.forms[0];
+val = document.forms[0].id;
+val = document.forms[0].method;
+val = document.forms[0].action;
 
-// test();
+val = document.links;
+val = document.links[0];
+val = document.links[0].className;
+val = document.links[0].classList;
+val = document.links[0].classList[0];
 
-// if(true){
-//     // Block Scope
-//     var a = 4;
-//     let b = 5;
-//     const c = 6;
-//     console.log('If Scope: ', a, b, c);
-// }
+val = document.images;
 
-for(var a = 0; a < 10; a++) {
-    console.log(`Loop: ${a}`);
-}
+val = document.scripts;
+val = document.scripts[2].getAttribute('src');
 
-console.log('Global Scope: ', a, b, c);
+let scripts = document.scripts;
+
+let scriptsArr = Array.from(scripts);
+
+scriptsArr.forEach(function(script) {
+    console.log(script.getAttribute('src'));
+})
+
+console.log(val);
