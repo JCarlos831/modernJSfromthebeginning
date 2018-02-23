@@ -1,42 +1,60 @@
-//SECTION 3 LECTURE 26 - CREATING ELEMENTS
+//SECTION 3 LECTURE 27 - REMOVING AND REPLACING ELEMENTS
 
 // Create Element
 
-const li = document.createElement('li');
+const newHeading = document.createElement('h2');
 
-// Add Class
+// Add id
+newHeading.id = 'task-title';
 
-li.className = 'collection-item'
+// New Text Node
+newHeading.appendChild(document.createTextNode('Task List'));
 
-// Add ID
+// Get the old heading
+const oldHeading = document.getElementById('task-title');
 
-li.id = 'new-item';
+// Parent
+const cardAction = document.querySelector('.card-action');
 
-// Add Attribute
+// Replace
 
-li.setAttribute('title', 'New Item');
+cardAction.replaceChild(newHeading, oldHeading);
 
-// Create Text Node and Append
 
-li.appendChild(document.createTextNode('Hello World'));
+// Remove element
 
-// Create New Link Element
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
 
-const link = document.createElement('a');
+// Remove List Item
 
-// Add Classes
+lis[0].remove();
 
-link.className = 'delete-item secondary-content';
+// Remove Child Element
 
-// Add icon html
+list.removeChild(lis[3]);
 
-link.innerHTML = '<i class="fa fa-remove"></i>';
+// Classes & Attributes
 
-//Append Link into li
-li.appendChild(link);
+const firstLi = document.querySelector('li:first-child');
+const link = firstLi.children[0];
 
-// Append li as child to ul
+let val;
 
-document.querySelector('ul.collection').appendChild(li);
+val = link.className;
+val = link.classList;
+val = link.classList[0];
+link.classList.add('test');
+link.classList.remove('test');
+val = link;
 
-console.log(li);
+// Attributes
+val = link.getAttribute('href');
+val = link.setAttribute('href', 'http://google.com');
+link.setAttribute('title', 'Google');
+val = link.hasAttribute('href');
+val = link.hasAttribute('title');
+link.removeAttribute('title');
+val = link;
+
+console.log(val);
