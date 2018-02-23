@@ -1,64 +1,31 @@
-//SECTION 2 LECTURE 19 - A LOOK AT THE WINDOW OBJECT
+//SECTION 2 LECTURE 20 - BLOCK SCOPE WITH let & const
 
-// Window Methods / Objects / Properties
+// Global Scope
+var a = 1;
+let b = 2;
+const c = 3;
 
-// Alert
-// console.log('Hello World');
+// console.log('Global Scope: ', a, b, c);
 
-// Prompt
-// const input = prompt();
-// alert(input);
-
-// Confirm
-// if(confirm('Are you sure?')){
-//     console.log('YES');
-// } else {
-//     console.log('NO');
+// function test() {
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('Function Scope: ', a, b, c);
 // }
 
-let val;
+// test();
 
-// Outer Height and Width
-val = window.outerHeight;
-val = window.outerWidth;
+// if(true){
+//     // Block Scope
+//     var a = 4;
+//     let b = 5;
+//     const c = 6;
+//     console.log('If Scope: ', a, b, c);
+// }
 
-// Inner Height and Width
-val = window.innerHeight;
-val = window.innerWidth;
+for(var a = 0; a < 10; a++) {
+    console.log(`Loop: ${a}`);
+}
 
-// Scroll Points
-
-val = window.scrollY;
-val = window.scrollX;
-
-// Location Object
-
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
-
-// Redirect
-// window.location.href = 'http://google.com';
-
-// Reload
-// window.location.reload();
-
-// History Object
-
-//window.history.go(-1);
-// val = window.history.length;
-
-// Navigator Object
-val = window.navigator;
-val = window.navigator.appName;
-val = window.navigator.appVersion;
-val = window.navigator.userAgent;
-val = window.navigator.platform;
-val = window.navigator.vendor;
-val = window.navigator.language;
-
-
-
-console.log(val);
+console.log('Global Scope: ', a, b, c);
