@@ -1,60 +1,40 @@
-//SECTION 3 LECTURE 27 - REMOVING AND REPLACING ELEMENTS
+//SECTION 3 LECTURE 28 - EVENT LISTENERS & THE EVENT OBJECT 
 
-// Create Element
+// document.querySelector('.clear-tasks').addEventListener('click', function(e) {
+//     console.log('Hello World');
+    
+//     e.preventDefault();
+// })
 
-const newHeading = document.createElement('h2');
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
-// Add id
-newHeading.id = 'task-title';
+function onClick(e){
+    // console.log('Clicked');
+    
+    let val;
+    
+    val = e;
+    
+    // Event Target Element
+    
+    val = e.target;
+    val = e.target.id;
+    val = e.target.className;
+    val = e.target.classList;
 
-// New Text Node
-newHeading.appendChild(document.createTextNode('Task List'));
-
-// Get the old heading
-const oldHeading = document.getElementById('task-title');
-
-// Parent
-const cardAction = document.querySelector('.card-action');
-
-// Replace
-
-cardAction.replaceChild(newHeading, oldHeading);
-
-
-// Remove element
-
-const lis = document.querySelectorAll('li');
-const list = document.querySelector('ul');
-
-// Remove List Item
-
-lis[0].remove();
-
-// Remove Child Element
-
-list.removeChild(lis[3]);
-
-// Classes & Attributes
-
-const firstLi = document.querySelector('li:first-child');
-const link = firstLi.children[0];
-
-let val;
-
-val = link.className;
-val = link.classList;
-val = link.classList[0];
-link.classList.add('test');
-link.classList.remove('test');
-val = link;
-
-// Attributes
-val = link.getAttribute('href');
-val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('href');
-val = link.hasAttribute('title');
-link.removeAttribute('title');
-val = link;
-
-console.log(val);
+    // Event Type
+    val = e.type;
+    
+    // Timestamp
+    val = e.timeStamp;
+    
+    // Coordinates event relative to the window
+    val = e.clientY;
+    val = e.clientX;
+    
+    // Coordinates event relative to the element
+    val = e.offsetY;
+    val = e.offsetX;
+    
+    console.log(val);
+};
