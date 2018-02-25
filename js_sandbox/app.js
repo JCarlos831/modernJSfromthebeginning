@@ -1,44 +1,57 @@
-//SECTION 3 LECTURE 29 - MOUSE EVENTS 
+//SECTION 3 LECTURE 30 - KEYBOARD & INPUT EVENTS
 
-const clearBtn = document.querySelector('.clear-tasks');
-const card = document.querySelector('.card');
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
+const select = document.querySelector('select');
 
-// Click
-// clearBtn.addEventListener('click', runEvent);
+// Clear Input
+taskInput.value = '';
 
-// Double Click
-// clearBtn.addEventListener('dblclick', runEvent);
+// form.addEventListener('submit', runEvent);
 
-// Mouse Down
-// clearBtn.addEventListener('mousedown', runEvent);
+// Key down
+// taskInput.addEventListener('keydown', runEvent);
 
-// Mouse Up
-// clearBtn.addEventListener('mouseup', runEvent);
+// Key up
+// taskInput.addEventListener('keyup', runEvent);
 
-// Mouse Enter
-// card.addEventListener('mouseenter', runEvent);
+// Key Press
+// taskInput.addEventListener('keypress', runEvent);
 
-// Mouse Leave
-// card.addEventListener('mouseleave', runEvent);
+// Focus
+// taskInput.addEventListener('focus', runEvent);
 
-// Mouse Over
-// card.addEventListener('mouseover', runEvent);
+// Blur
+// taskInput.addEventListener('blur', runEvent);
 
-// Mouse Out
-// card.addEventListener('mouseout', runEvent);
+// Cut
+// taskInput.addEventListener('cut', runEvent);
 
-// Mouse Move
-card.addEventListener('mousemove', runEvent);
+// Paste
+// taskInput.addEventListener('paste', runEvent);
+
+// Input Event
+// taskInput.addEventListener('input', runEvent);
+
+// Change
+select.addEventListener('change', runEvent);
 
 
 
-// Event Handler
+
+
+
 
 function runEvent(e) {
     console.log(`EVENT TYPE: ${e.type}`);
     
-    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+    console.log(e.target.value);
     
-    document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY},40)`;
+    // heading.innerText = e.target.value;
+    
+    // Get Input Value
+    // console.log(taskInput.value);
+    
+    // e.preventDefault();
 }
