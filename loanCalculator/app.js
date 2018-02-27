@@ -12,6 +12,24 @@ document.querySelector('#loan-form').addEventListener('submit', function(e){
     e.preventDefault();
 });
 
+// Reset Fields
+// function resetFields() {
+//     document.querySelector('#amount').innerHTML = '';
+//     document.querySelector('#interest').innerHTML = '';
+//     document.querySelector('#years').innerHTML = '';
+// }
+
+document.querySelector('#resetFields').addEventListener('click', function() {
+    console.log('reset');
+    document.querySelector('#amount').value = '';
+    document.querySelector('#interest').value = '';
+    document.querySelector('#years').value = '';
+    document.querySelector('#loading').style.display = 'none';
+    
+    // Hide results
+    document.querySelector('#results').style.display = 'none';
+});
+
 // Calculate Results
 function calculateResults() {
     console.log('Calculating...');
@@ -43,9 +61,7 @@ function calculateResults() {
             document.querySelector('#loading').style.display = 'none';
 
     } else {
-        console.log('Please check your numbers');
         showError('Please check your numbers');
-        
     }
 }
 
@@ -78,6 +94,7 @@ function showError(error){
 }
 
 // Clear Error
-function clearError(){
+function clearError() {
     document.querySelector('.alert').remove();
 }
+
