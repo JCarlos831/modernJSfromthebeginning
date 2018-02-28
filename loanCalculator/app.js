@@ -13,11 +13,6 @@ document.querySelector('#loan-form').addEventListener('submit', function(e){
 });
 
 // Reset Fields
-// function resetFields() {
-//     document.querySelector('#amount').innerHTML = '';
-//     document.querySelector('#interest').innerHTML = '';
-//     document.querySelector('#years').innerHTML = '';
-// }
 
 document.querySelector('#resetFields').addEventListener('click', function() {
     console.log('reset');
@@ -37,7 +32,7 @@ function calculateResults() {
     const amount = document.querySelector('#amount');
     const interest = document.querySelector('#interest');
     const years = document.querySelector('#years');
-    const monthlyPayment = document.querySelector('#monthly-payment');
+    const monthlyPayment = '$' + document.querySelector('#monthly-payment');
     const totalPayment = document.querySelector('#total-payment');
     const totalInterest = document.querySelector('#total-interest')
     
